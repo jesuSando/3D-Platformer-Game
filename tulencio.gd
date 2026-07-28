@@ -4,6 +4,8 @@ extends CharacterBody3D
 const SPEED = 5.0
 const JUMP_VELOCITY = 6
 
+var xform : Transform3D
+
 
 func _physics_process(delta: float) -> void:	
 	
@@ -23,7 +25,7 @@ func _physics_process(delta: float) -> void:
 		
 	#if not is_on_floor():
 		#rotate_y(0.1)
-
+		
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var input_dir := Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
@@ -34,6 +36,14 @@ func _physics_process(delta: float) -> void:
 	if input_dir != Vector2(0,0):
 		$MeshInstance3D.rotation_degrees.y = $Camera_Controller.rotation_degrees.y - rad_to_deg(input_dir.angle()) - 90
 	
+		
+	if is_on_floor(): #and input_dir != Vector2(0,0):
+		align_with_floor($RayCast3D.get_collision_normal())
+		global_transform = global_transform.interpolate_with(xform,0.3)
+	elif not is_on_floor():
+		align_with_floor(Vector3.UP)
+		global_transform = global_transform.interpolate_with(xform,0.3)
+
 	if direction:
 		velocity.x = direction.x * SPEED
 		velocity.z = direction.z * SPEED
@@ -45,3 +55,9 @@ func _physics_process(delta: float) -> void:
 	
 	# Make camera controller match the position of myself
 	$Camera_Controller.position = lerp($Camera_Controller.position, position, 0.15)
+	
+func align_with_floor(floor_normal):
+	xform = global_transform
+	xform.basis.y = floor_normal
+	xform.basis.x = -xform.basis.z.cross(floor_normal)
+	xform.basis = xform.basis.orthonormalized()
