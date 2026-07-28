@@ -8,6 +8,7 @@ height = 0.15
 radius = 0.3
 
 [node name="Coin" type="Area3D" unique_id=1550864334]
+collision_layer = 4
 script = ExtResource("1_d5gmh")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=2136788682]
