@@ -9,6 +9,17 @@ var xform : Transform3D
 
 func _physics_process(delta: float) -> void:	
 	
+	var input_dir := Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
+	
+	
+	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
+		play_anim("jump")
+	elif is_on_floor() and input_dir != Vector2.ZERO:
+		play_anim("run")
+	elif is_on_floor() and input_dir == Vector2.ZERO:
+		play_anim("idle")
+	
+	
 	#rotate the camera
 	if Input.is_action_just_pressed("cam_left"):
 		$Camera_Controller.rotate_y(deg_to_rad(30))
@@ -28,13 +39,12 @@ func _physics_process(delta: float) -> void:
 		
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
-	var input_dir := Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 	
 	var direction = ($Camera_Controller.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	
 	#rotate the character's face
 	if input_dir != Vector2(0,0):
-		$MeshInstance3D.rotation_degrees.y = $Camera_Controller.rotation_degrees.y - rad_to_deg(input_dir.angle()) - 90
+		$Armature.rotation_degrees.y = $Camera_Controller.rotation_degrees.y - rad_to_deg(input_dir.angle()) - 90
 	
 		
 	if is_on_floor(): #and input_dir != Vector2(0,0):
@@ -62,6 +72,9 @@ func align_with_floor(floor_normal):
 	xform.basis.x = -xform.basis.z.cross(floor_normal)
 	xform.basis = xform.basis.orthonormalized()
 
+func play_anim(anim: String):
+	if $AnimationPlayer.current_animation != anim:
+		$AnimationPlayer.play(anim)
 
 func _on_fall_zone_body_entered(body: Node3D) -> void:
 	get_tree().call_deferred("change_scene_to_file", "res://level_1.tscn")
