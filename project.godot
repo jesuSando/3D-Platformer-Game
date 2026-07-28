@@ -14,6 +14,10 @@ config/name="3D Platformer Game"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Global="*uid://b2b3iiaytyc5"
+
 [display]
 
 window/stretch/mode="canvas_items"
