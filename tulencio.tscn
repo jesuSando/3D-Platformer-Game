@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://c3e6e0p3kp8t2"]
+
+[ext_resource type="Script" uid="uid://d2mjndckm8yqx" path="res://tulencio.gd" id="1_ga6ij"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_acdcl"]
+albedo_color = Color(0.7166667, 1, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_1e7x0"]
+material = SubResource("StandardMaterial3D_acdcl")
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_ucixj"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ucixj"]
+
+[node name="Tulencio" type="CharacterBody3D" unique_id=2036021083]
+script = ExtResource("1_ga6ij")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=456403699]
+mesh = SubResource("BoxMesh_1e7x0")
+
+[node name="Face" type="MeshInstance3D" parent="MeshInstance3D" unique_id=1471619541]
+transform = Transform3D(0.6, 0, 0, 0, -4.3711372e-09, -0.6, 0, 0.099999964, -2.6226834e-08, 0, 0.16759497, -0.5094878)
+mesh = SubResource("CylinderMesh_ucixj")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1699620196]
+shape = SubResource("BoxShape3D_ucixj")
+
+[node name="Camera_Controller" type="Node3D" parent="." unique_id=166238500]
+top_level = true
+
+[node name="Camera_Target" type="Node3D" parent="Camera_Controller" unique_id=1367562769]
+transform = Transform3D(1, 0, 0, 0, 0.8980515, 0.43989038, 0, -0.43989038, 0.8980515, 0, 3.9116702, 6.4513702)
+
+[node name="Camera3D" type="Camera3D" parent="Camera_Controller/Camera_Target" unique_id=2032826370]
+transform = Transform3D(1, 0, 0, 0, 0.9992434, -0.038893398, 0, 0.038893398, 0.9992434, 0, 0.2211808, -1.90084)
