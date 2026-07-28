@@ -10,7 +10,7 @@ material = SubResource("StandardMaterial3D_rka8t")
 
 [node name="Block" type="RigidBody3D" unique_id=1910541986]
 collision_layer = 4
-collision_mask = 3
+collision_mask = 7
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=125753371]
 mesh = SubResource("BoxMesh_ucixj")
