@@ -1,6 +1,7 @@
 extends Area3D
 
 const ROT_SPEED = 2
+@export var hud : CanvasLayer
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -18,7 +19,7 @@ func _process(delta: float) -> void:
 func _on_body_entered(body: Node3D) -> void:
 	Global.coins += 1
 	#print(Global.coins)
-	
+	hud.get_node("CoinsLabel").text = str(Global.coins)
 	if Global.coins >= Global.COINS_TO_WIN:
 		print("victory")
 		get_tree().call_deferred("change_scene_to_file", "res://level_1.tscn")
