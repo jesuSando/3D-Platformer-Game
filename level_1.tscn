@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://c115r8mocvqq8"]
 
-[ext_resource type="PackedScene" uid="uid://b32440loh4ttm" path="res://block.tscn" id="1_3hls8"]
 [ext_resource type="Script" uid="uid://do0hs7baapiuu" path="res://level_1.gd" id="1_5hph3"]
 [ext_resource type="PackedScene" uid="uid://c3e6e0p3kp8t2" path="res://tulencio.tscn" id="2_hbghi"]
 [ext_resource type="Environment" uid="uid://dydlph0aywc21" path="res://Resources/level_1_enviroment.tres" id="4_ihfcg"]
@@ -18,20 +17,6 @@ script = ExtResource("1_5hph3")
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=500782391]
 transform = Transform3D(0.9226455, 0.12202268, -0.36583567, 0.26382634, 0.49219164, 0.8295439, 0.28128442, -0.86189204, 0.4219256, 0, 5.8042407, 0)
 shadow_enabled = true
-
-[node name="Blocks" type="Node3D" parent="." unique_id=1110922131]
-
-[node name="Block1" parent="Blocks" unique_id=1910541986 instance=ExtResource("1_3hls8")]
-transform = Transform3D(0.7084083, 0.45212963, -0.5419746, -0.70580286, 0.45379865, -0.5439753, 0, 0.76788384, 0.6405891, 0, 2.4783113, 0)
-
-[node name="Block2" parent="Blocks" unique_id=259970375 instance=ExtResource("1_3hls8")]
-transform = Transform3D(0.7084083, 0.45212966, -0.5419746, -0.4649462, -0.2787889, -0.8402986, -0.5310204, 0.8472636, 0.012719572, 0, 4.508836, 0)
-
-[node name="Block3" parent="Blocks" unique_id=79699023 instance=ExtResource("1_3hls8")]
-transform = Transform3D(-0.57414776, 0.50948805, -0.6409184, 0.013852716, -0.7766425, -0.62978923, -0.8186345, -0.37047052, 0.4388498, -1.0001183, 7.4555597, -0.17356114)
-
-[node name="Block4" parent="Blocks" unique_id=1851474271 instance=ExtResource("1_3hls8")]
-transform = Transform3D(-0.326615, -0.2137072, -0.9206801, 0.5400436, -0.8416288, 0.003775318, -0.7756775, -0.49597436, 0.3902998, 1.0001183, 7.4157066, 0.17356114)
 
 [node name="Tulencio" parent="." unique_id=2036021083 instance=ExtResource("2_hbghi")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9342623, 3.9023366)
@@ -83,21 +68,21 @@ hud = NodePath("../../HUD")
 [node name="Enemies" type="Node3D" parent="." unique_id=232599972]
 
 [node name="Enemy1" parent="Enemies" unique_id=470753021 instance=ExtResource("8_bjebc")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -5.000081, 0.22154391, 1.0101055)
+transform = Transform3D(-6.556708e-08, 0, 1.5, 0, 1.5, 0, -1.5, 0, -6.556708e-08, -5.000081, 0.22154391, -0.90853584)
 
 [node name="Enemy2" parent="Enemies" unique_id=850762831 instance=ExtResource("8_bjebc")]
-transform = Transform3D(0.99950814, 0, 0.031360015, 0, 1, 0, -0.031360015, 0, 0.99950814, 3.0344057, 0.22154391, 2.9655676)
+transform = Transform3D(1.4992622, 0, 0.047040034, 0, 1.5, 0, -0.047040034, 0, 1.4992622, 0.76121235, 0.22154391, 9.016942)
 direction = Vector3(0, 0, 1)
 
 [node name="Enemy3" parent="Enemies" unique_id=313369897 instance=ExtResource("8_bjebc")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -1.0692072, 0.22154391, 9.172476)
+transform = Transform3D(-6.556708e-08, 0, 1.5, 0, 1.5, 0, -1.5, 0, -6.556708e-08, -1.0692072, 0.22154391, 9.172476)
 
 [node name="Enemy4" parent="Enemies" unique_id=1592406332 instance=ExtResource("8_bjebc")]
-transform = Transform3D(0.99950814, 0, 0.031360015, 0, 1, 0, -0.031360015, 0, 0.99950814, 6.806309, 0.22154391, -2.8029573)
+transform = Transform3D(1.4992622, 0, 0.04704003, 0, 1.5, 0, -0.04704003, 0, 1.4992622, 6.806309, 0.22154391, -2.8029573)
 direction = Vector3(0, 0, 1)
 
 [node name="Enemy5" parent="Enemies" unique_id=1517595786 instance=ExtResource("8_bjebc")]
-transform = Transform3D(0.99950814, 0, 0.031360015, 0, 1, 0, -0.031360015, 0, 0.99950814, -3.0487642, 0.22154391, 2.9655676)
+transform = Transform3D(1.4992622, 0, 0.04704003, 0, 1.5, 0, -0.04704003, 0, 1.4992622, -3.0487642, 0.22154391, 2.9655676)
 direction = Vector3(0, 0, 1)
 
 [connection signal="body_entered" from="FallZone" to="Tulencio" method="_on_fall_zone_body_entered"]

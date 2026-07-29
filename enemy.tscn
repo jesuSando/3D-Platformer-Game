@@ -176,8 +176,10 @@ height = 0.19586182
 radius = 0.29052734
 
 [node name="Enemy" type="CharacterBody3D" unique_id=470753021]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
 collision_layer = 8
 collision_mask = 2
+floor_max_angle = 1.0471976
 script = ExtResource("1_7k104")
 
 [node name="Armature" type="Node3D" parent="." unique_id=1363993165]
@@ -225,6 +227,11 @@ collision_layer = 0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="TopChecker" unique_id=1108571156]
 shape = SubResource("CylinderShape3D_1e7x0")
+
+[node name="FloorRayCast" type="RayCast3D" parent="." unique_id=1297578752]
+transform = Transform3D(1, 0, 0, 0, 1.6705432, 0, 0, 0, 1, 0, 0.17400107, 0.36920154)
+target_position = Vector3(0, -0.3, 0)
+collision_mask = 2
 
 [connection signal="body_entered" from="SidesChecker" to="." method="_on_sides_checker_body_entered"]
 [connection signal="body_entered" from="TopChecker" to="." method="_on_top_checker_body_entered"]
