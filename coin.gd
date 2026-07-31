@@ -22,7 +22,7 @@ func _on_body_entered(body: Node3D) -> void:
 	hud.get_node("CoinsLabel").text = str(Global.coins)
 	if Global.coins >= Global.COINS_TO_WIN:
 		print("victory")
-		get_tree().call_deferred("change_scene_to_file", "res://level_1.tscn")
+		get_tree().call_deferred("change_scene_to_file", "res://menu_win.tscn")
 		
 	set_collision_layer_value(3, false)
 	set_collision_mask_value(1, false)

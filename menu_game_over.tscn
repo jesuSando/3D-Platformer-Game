@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://c141tvbiqi7dr"]
+
+[ext_resource type="Script" uid="uid://b4uerjlsq6gga" path="res://menu_game_over.gd" id="1_clmc2"]
+[ext_resource type="FontFile" uid="uid://fgakqttd7ce7" path="res://Assets/Fonts/KiriFont.ttf" id="2_bcjj4"]
+[ext_resource type="Texture2D" uid="uid://b06hu74vypcxx" path="res://Assets/Images/image-screen-gameover.png" id="3_clmc2"]
+
+[node name="MenuTitle" type="Control" unique_id=1158054801]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_clmc2")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1647944104]
+layout_mode = 0
+offset_left = -26.0
+offset_top = -21.0
+offset_right = 1168.0
+offset_bottom = 678.0
+color = Color(0.23, 0.016099999, 0.016099999, 1)
+
+[node name="Label" type="Label" parent="." unique_id=705460585]
+layout_mode = 0
+offset_left = 33.0
+offset_top = 65.99999
+offset_right = 1070.0
+offset_bottom = 224.0
+rotation = -0.00046319515
+theme_override_colors/font_color = Color(0.89, 0.24919997, 0.25987983, 1)
+theme_override_colors/font_shadow_color = Color(0.27058825, 0.4, 0.81960785, 1)
+theme_override_colors/font_outline_color = Color(0.38, 0.10639999, 0.11095993, 1)
+theme_override_constants/shadow_offset_x = 12
+theme_override_constants/shadow_offset_y = 11
+theme_override_constants/outline_size = 22
+theme_override_fonts/font = ExtResource("2_bcjj4")
+theme_override_font_sizes/font_size = 100
+text = "GAME OVER"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1975881636]
+layout_mode = 0
+offset_left = 43.0
+offset_top = -57.0
+offset_right = 1108.0
+offset_bottom = 542.0625
+texture = ExtResource("3_clmc2")
+expand_mode = 1
+
+[node name="Button" type="Button" parent="." unique_id=1414647943]
+layout_mode = 0
+offset_left = 382.0
+offset_top = 514.0
+offset_right = 753.0
+offset_bottom = 608.0
+theme_override_colors/font_color = Color(0.93, 0.76260006, 0.093000025, 1)
+theme_override_colors/font_hover_color = Color(1, 0.473, 0.06999999, 1)
+theme_override_colors/font_outline_color = Color(1, 0.120000005, 0.120000005, 1)
+theme_override_constants/outline_size = 16
+theme_override_fonts/font = ExtResource("2_bcjj4")
+theme_override_font_sizes/font_size = 50
+text = "MAIN MENU"
+flat = true
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
