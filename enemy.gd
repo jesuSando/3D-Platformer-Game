@@ -48,6 +48,7 @@ func _on_sides_checker_body_entered(body: Node3D) -> void:
 
 func _on_top_checker_body_entered(body: Node3D) -> void:
 	$AnimationPlayer.play("squash")
+	$SoundSquash.play()
 	body.bounce()
 	$SidesChecker.set_collision_mask_value(1, false)
 	$TopChecker.set_collision_mask_value(1, false)

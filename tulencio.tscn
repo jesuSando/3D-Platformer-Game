@@ -916,3 +916,4 @@ libraries/ = SubResource("AnimationLibrary_wid6v")
 
 [node name="SoundJump" type="AudioStreamPlayer" parent="." unique_id=1723943048]
 stream = ExtResource("3_xwwhw")
+volume_db = -20.0
