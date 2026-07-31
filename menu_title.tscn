@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://dpewou8puoudi"]
+
+[ext_resource type="FontFile" uid="uid://fgakqttd7ce7" path="res://Assets/Fonts/KiriFont.ttf" id="1_n3opb"]
+[ext_resource type="Texture2D" uid="uid://4qdll1ny386k" path="res://Assets/Images/image-screen-title.png" id="2_5cs7u"]
+
+[node name="MenuTitle" type="Control" unique_id=1158054801]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1647944104]
+layout_mode = 0
+offset_left = -26.0
+offset_top = -21.0
+offset_right = 1168.0
+offset_bottom = 678.0
+color = Color(0.10980392, 0.015686275, 0.34901962, 1)
+
+[node name="Label" type="Label" parent="." unique_id=705460585]
+layout_mode = 0
+offset_left = 31.0
+offset_top = 125.99999
+offset_right = 1068.0
+offset_bottom = 284.0
+rotation = -0.07402411
+theme_override_colors/font_color = Color(0.7607843, 0.2509804, 0.8901961, 1)
+theme_override_colors/font_shadow_color = Color(0.92941177, 0.8862745, 0.05490196, 1)
+theme_override_constants/shadow_offset_x = 7
+theme_override_constants/shadow_offset_y = 6
+theme_override_fonts/font = ExtResource("1_n3opb")
+theme_override_font_sizes/font_size = 70
+text = "3D PLATFORMER GAME!"
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1975881636]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 99.0
+offset_right = 1089.0
+offset_bottom = 698.0625
+texture = ExtResource("2_5cs7u")
+expand_mode = 1
+
+[node name="Button" type="Button" parent="." unique_id=1414647943]
+layout_mode = 0
+offset_left = 778.0
+offset_top = 314.0
+offset_right = 963.0
+offset_bottom = 408.0
+theme_override_colors/font_color = Color(0.5686275, 0.92941177, 0.09411765, 1)
+theme_override_colors/font_hover_color = Color(1, 0.90588236, 0.07058824, 1)
+theme_override_fonts/font = ExtResource("1_n3opb")
+theme_override_font_sizes/font_size = 50
+text = "PLAY"
+flat = true
