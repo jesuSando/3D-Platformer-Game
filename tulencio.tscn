@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://d2mjndckm8yqx" path="res://tulencio.gd" id="1_ga6ij"]
 [ext_resource type="Texture2D" uid="uid://b2g767vqhdcar" path="res://Assets/Models/game-robot-001_robot_mix_decals.png" id="2_gdhr3"]
+[ext_resource type="AudioStream" uid="uid://lfpdqem7xej7" path="res://Assets/SoundEffects/jump-jump4.ogg" id="3_xwwhw"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_tmnun"]
 radius = 0.32617188
@@ -912,3 +913,6 @@ skeleton = NodePath("..")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1404822714]
 libraries/ = SubResource("AnimationLibrary_wid6v")
+
+[node name="SoundJump" type="AudioStreamPlayer" parent="." unique_id=1723943048]
+stream = ExtResource("3_xwwhw")
