@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 Global="*uid://b2b3iiaytyc5"
+SoundManager="*uid://cwsi513c3ycbp"
 
 [display]
 
