@@ -9,6 +9,7 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+scale = Vector2(1.16, 1.16)
 script = ExtResource("1_5cs7u")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1647944104]
@@ -21,11 +22,12 @@ color = Color(0.10980392, 0.015686275, 0.34901962, 1)
 
 [node name="Label" type="Label" parent="." unique_id=705460585]
 layout_mode = 0
-offset_left = 31.0
-offset_top = 125.99999
-offset_right = 1068.0
-offset_bottom = 284.0
-rotation = -0.07402411
+offset_left = 50.86207
+offset_top = 81.896545
+offset_right = 1087.862
+offset_bottom = 239.89656
+rotation = -0.051887296
+scale = Vector2(0.9499016, 0.9499016)
 theme_override_colors/font_color = Color(0.7607843, 0.2509804, 0.8901961, 1)
 theme_override_colors/font_shadow_color = Color(0.92941177, 0.8862745, 0.05490196, 1)
 theme_override_constants/shadow_offset_x = 7
@@ -33,13 +35,15 @@ theme_override_constants/shadow_offset_y = 6
 theme_override_fonts/font = ExtResource("1_n3opb")
 theme_override_font_sizes/font_size = 70
 text = "3D PLATFORMER GAME!"
+vertical_alignment = 1
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1975881636]
 layout_mode = 0
-offset_left = 24.0
-offset_top = 99.0
-offset_right = 1089.0
-offset_bottom = 698.0625
+offset_left = 60.344833
+offset_top = 99.13794
+offset_right = 1125.3448
+offset_bottom = 698.20044
+scale = Vector2(0.91805935, 0.91805935)
 texture = ExtResource("2_5cs7u")
 expand_mode = 1
 
