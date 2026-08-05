@@ -13,7 +13,7 @@ size = Vector3(81, 1, 97)
 
 [node name="Level_2" type="Node3D" unique_id=951473485 node_paths=PackedStringArray("hud")]
 script = ExtResource("1_s275v")
-coins_to_win = 2
+coins_to_win = 20
 next_level = "uid://dstkkmuoh3l26"
 hud = NodePath("HUD")
 level_title = "Collect 20 Coins"

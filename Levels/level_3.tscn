@@ -6,15 +6,16 @@
 [ext_resource type="MeshLibrary" uid="uid://m3qtj04tw8j8" path="res://Resources/world-blocks-v1.tres" id="4_fa81k"]
 [ext_resource type="PackedScene" uid="uid://c3e6e0p3kp8t2" path="res://Entities/tulencio.tscn" id="5_ck3gp"]
 [ext_resource type="PackedScene" uid="uid://csovj13d8w058" path="res://Resources/platform_3x_2.tscn" id="6_uwxw1"]
+[ext_resource type="PackedScene" uid="uid://dgb62lwnfirwd" path="res://Entities/enemy.tscn" id="7_ay5qi"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ucixj"]
 size = Vector3(1, 5.097168, 1)
 
 [node name="Level3" type="Node3D" unique_id=1145978088 node_paths=PackedStringArray("hud")]
 script = ExtResource("1_padch")
-coins_to_win = 2
+enemies_to_win = 20
 hud = NodePath("HUD")
-level_title = "Collect 12 Coins"
+level_title = "Kill 20 Enemies"
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=500782391]
 transform = Transform3D(0.9226455, 0.12202268, -0.36583567, 0.26382634, 0.49219164, 0.8295439, 0.28128442, -0.86189204, 0.4219256, 0, 5.8042407, 0)
@@ -43,7 +44,7 @@ data = {
 metadata/_editor_floor_ = Vector3(0, 0, 0)
 
 [node name="Tulencio" parent="." unique_id=2036021083 instance=ExtResource("5_ck3gp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3471355, 0)
 
 [node name="Moving Platforms" type="Node3D" parent="." unique_id=1221394022]
 
@@ -51,3 +52,95 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -5, 11, -6)
 a = Vector3(-5, 11, -6)
 b = Vector3(-5, 2, -6)
+
+[node name="Enemies" type="Node3D" parent="." unique_id=1564669086]
+
+[node name="Enemy1" parent="Enemies" unique_id=470753021 node_paths=PackedStringArray("hud") instance=ExtResource("7_ay5qi")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 4.997412, 0.19745725, 3)
+direction = Vector3(0, 0, 1)
+hud = NodePath("../../HUD")
+
+[node name="Enemy8" parent="Enemies" unique_id=1234458573 node_paths=PackedStringArray("hud") instance=ExtResource("7_ay5qi")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 7.1101346, 0.19745725, -1.112073)
+direction = Vector3(0, 0, 1)
+hud = NodePath("../../HUD")
+
+[node name="Enemy2" parent="Enemies" unique_id=584486121 node_paths=PackedStringArray("hud") instance=ExtResource("7_ay5qi")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -7.0327296, 0.22988999, 0.7912617)
+direction = Vector3(0, 0, 1)
+hud = NodePath("../../HUD")
+
+[node name="Enemy10" parent="Enemies" unique_id=1706096292 node_paths=PackedStringArray("hud") instance=ExtResource("7_ay5qi")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -8.972284, 11.131068, -7.0180907)
+direction = Vector3(0, 0, 1)
+hud = NodePath("../../HUD")
+
+[node name="Enemy11" parent="Enemies" unique_id=1669132840 node_paths=PackedStringArray("hud") instance=ExtResource("7_ay5qi")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -1.0960083, 11.131068, -2.9139905)
+direction = Vector3(0, 0, 1)
+hud = NodePath("../../HUD")
+
+[node name="Enemy17" parent="Enemies" unique_id=1069084045 node_paths=PackedStringArray("hud") instance=ExtResource("7_ay5qi")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -1.0960083, 11.131068, 3.0725274)
+direction = Vector3(0, 0, 1)
+hud = NodePath("../../HUD")
+
+[node name="Enemy13" parent="Enemies" unique_id=1813355525 node_paths=PackedStringArray("hud") instance=ExtResource("7_ay5qi")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 3.0258603, 11.131068, 1.1632724)
+direction = Vector3(0, 0, 1)
+hud = NodePath("../../HUD")
+
+[node name="Enemy15" parent="Enemies" unique_id=1902524467 node_paths=PackedStringArray("hud") instance=ExtResource("7_ay5qi")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 6.947826, 11.131068, -2.8067713)
+direction = Vector3(0, 0, 1)
+hud = NodePath("../../HUD")
+
+[node name="Enemy16" parent="Enemies" unique_id=751506741 node_paths=PackedStringArray("hud") instance=ExtResource("7_ay5qi")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 9.044783, 11.131068, -6.9831553)
+direction = Vector3(0, 0, 1)
+hud = NodePath("../../HUD")
+
+[node name="Enemy12" parent="Enemies" unique_id=488967961 node_paths=PackedStringArray("hud") instance=ExtResource("7_ay5qi")]
+transform = Transform3D(-6.556708e-08, 0, 1.5, 0, 1.5, 0, -1.5, 0, -6.556708e-08, 0.96832955, 11.131068, -0.9045083)
+hud = NodePath("../../HUD")
+
+[node name="Enemy20" parent="Enemies" unique_id=1670541680 node_paths=PackedStringArray("hud") instance=ExtResource("7_ay5qi")]
+transform = Transform3D(-6.556708e-08, 0, 1.5, 0, 1.5, 0, -1.5, 0, -6.556708e-08, 2.7932987, 11.131068, -2.8263938)
+hud = NodePath("../../HUD")
+
+[node name="Enemy14" parent="Enemies" unique_id=1494352821 node_paths=PackedStringArray("hud") instance=ExtResource("7_ay5qi")]
+transform = Transform3D(-6.556708e-08, 0, 1.5, 0, 1.5, 0, -1.5, 0, -6.556708e-08, -2.9125, 11.131068, 8.850985)
+hud = NodePath("../../HUD")
+
+[node name="Enemy19" parent="Enemies" unique_id=1702635388 node_paths=PackedStringArray("hud") instance=ExtResource("7_ay5qi")]
+transform = Transform3D(-6.556708e-08, 0, 1.5, 0, 1.5, 0, -1.5, 0, -6.556708e-08, 5.0088506, 11.131068, 7.0843067)
+hud = NodePath("../../HUD")
+
+[node name="Enemy18" parent="Enemies" unique_id=2032589138 node_paths=PackedStringArray("hud") instance=ExtResource("7_ay5qi")]
+transform = Transform3D(-6.556708e-08, 0, 1.5, 0, 1.5, 0, -1.5, 0, -6.556708e-08, 0.7888181, 12.219311, 4.9835305)
+hud = NodePath("../../HUD")
+
+[node name="Enemy7" parent="Enemies" unique_id=353114922 node_paths=PackedStringArray("hud") instance=ExtResource("7_ay5qi")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 8.656828, 0.22988999, -6.6417003)
+direction = Vector3(0, 0, 1)
+hud = NodePath("../../HUD")
+
+[node name="Enemy5" parent="Enemies" unique_id=1655458327 node_paths=PackedStringArray("hud") instance=ExtResource("7_ay5qi")]
+transform = Transform3D(-6.556708e-08, 0, 1.5, 0, 1.5, 0, -1.5, 0, -6.556708e-08, -7.135969, 1.0818064, -3.083964)
+hud = NodePath("../../HUD")
+
+[node name="Enemy3" parent="Enemies" unique_id=590468470 node_paths=PackedStringArray("hud") instance=ExtResource("7_ay5qi")]
+transform = Transform3D(-6.556708e-08, 0, 1.5, 0, 1.5, 0, -1.5, 0, -6.556708e-08, 2.9726677, 0.25676334, -3.2789462)
+hud = NodePath("../../HUD")
+
+[node name="Enemy6" parent="Enemies" unique_id=367431212 node_paths=PackedStringArray("hud") instance=ExtResource("7_ay5qi")]
+transform = Transform3D(-6.556708e-08, 0, 1.5, 0, 1.5, 0, -1.5, 0, -6.556708e-08, -6.80123, 0.25676334, 9.015603)
+hud = NodePath("../../HUD")
+
+[node name="Enemy9" parent="Enemies" unique_id=737595550 node_paths=PackedStringArray("hud") instance=ExtResource("7_ay5qi")]
+transform = Transform3D(-6.556708e-08, 0, 1.5, 0, 1.5, 0, -1.5, 0, -6.556708e-08, 1.0222446, 0.25676334, 7.0920563)
+hud = NodePath("../../HUD")
+
+[node name="Enemy4" parent="Enemies" unique_id=418209721 node_paths=PackedStringArray("hud") instance=ExtResource("7_ay5qi")]
+transform = Transform3D(-6.556708e-08, 0, 1.5, 0, 1.5, 0, -1.5, 0, -6.556708e-08, 2.9726677, 2.105117, -5.324237)
+hud = NodePath("../../HUD")
