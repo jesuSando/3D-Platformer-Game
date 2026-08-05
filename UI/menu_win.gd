@@ -6,4 +6,4 @@ func _ready() -> void:
 
 func _on_button_pressed() -> void:
 	SoundManager.play_button_sound()
-	get_tree().call_deferred("change_scene_to_file", "res://menu_title.tscn")
+	get_tree().call_deferred("change_scene_to_file", "res://UI/menu_title.tscn")

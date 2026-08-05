@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://csovj13d8w058"]
 
-[ext_resource type="Script" uid="uid://dooflhnal4e3o" path="res://platform_3x_2.gd" id="1_lqv1g"]
+[ext_resource type="Script" uid="uid://dooflhnal4e3o" path="res://Resources/platform_3x_2.gd" id="1_lqv1g"]
 [ext_resource type="Texture2D" uid="uid://bs3qcl2bqc3ag" path="res://Assets/Models/world-blocks-v1_Tiles118_1K-JPG_NormalGL.jpg" id="1_wbt3h"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eo8ug"]

@@ -1,26 +1,28 @@
 [gd_scene format=3 uid="uid://c115r8mocvqq8"]
 
-[ext_resource type="Script" uid="uid://do0hs7baapiuu" path="res://level_1.gd" id="1_5hph3"]
-[ext_resource type="PackedScene" uid="uid://c3e6e0p3kp8t2" path="res://tulencio.tscn" id="2_hbghi"]
+[ext_resource type="Script" uid="uid://m0ycb0ix5fhc" path="res://Levels/level_manager.gd" id="1_77x7w"]
+[ext_resource type="PackedScene" uid="uid://c3e6e0p3kp8t2" path="res://Entities/tulencio.tscn" id="2_hbghi"]
 [ext_resource type="Environment" uid="uid://dydlph0aywc21" path="res://Resources/level_1_enviroment.tres" id="4_ihfcg"]
 [ext_resource type="MeshLibrary" uid="uid://m3qtj04tw8j8" path="res://Resources/world-blocks-v1.tres" id="5_5hph3"]
-[ext_resource type="PackedScene" uid="uid://dbxs52if8rhw0" path="res://coin.tscn" id="5_rka8t"]
-[ext_resource type="PackedScene" uid="uid://tn84iu8qyl2r" path="res://hud.tscn" id="7_j7kpp"]
-[ext_resource type="PackedScene" uid="uid://csovj13d8w058" path="res://platform_3x_2.tscn" id="8_5rr72"]
-[ext_resource type="PackedScene" uid="uid://dgb62lwnfirwd" path="res://enemy.tscn" id="8_bjebc"]
+[ext_resource type="PackedScene" uid="uid://dbxs52if8rhw0" path="res://Entities/coin.tscn" id="5_rka8t"]
+[ext_resource type="PackedScene" uid="uid://tn84iu8qyl2r" path="res://UI/hud.tscn" id="7_j7kpp"]
+[ext_resource type="PackedScene" uid="uid://csovj13d8w058" path="res://Resources/platform_3x_2.tscn" id="8_5rr72"]
+[ext_resource type="PackedScene" uid="uid://dgb62lwnfirwd" path="res://Entities/enemy.tscn" id="8_bjebc"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ucixj"]
 size = Vector3(1, 5.097168, 1)
 
 [node name="Level1" type="Node3D" unique_id=1145978088]
-script = ExtResource("1_5hph3")
+script = ExtResource("1_77x7w")
+coins_to_win = 2
+next_level = "uid://bn2uqh7soblyl"
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=500782391]
 transform = Transform3D(0.9226455, 0.12202268, -0.36583567, 0.26382634, 0.49219164, 0.8295439, 0.28128442, -0.86189204, 0.4219256, 0, 5.8042407, 0)
 shadow_enabled = true
 
 [node name="Tulencio" parent="." unique_id=2036021083 instance=ExtResource("2_hbghi")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9342623, 3.9023366)
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, -14.669817, 5.630815, -9.0999)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1551201861]
 environment = ExtResource("4_ihfcg")
@@ -64,12 +66,43 @@ hud = NodePath("../../HUD")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.860834, 2.6403637, 9.1918125)
 hud = NodePath("../../HUD")
 
+[node name="Coin6" parent="Coins" unique_id=1124451201 node_paths=PackedStringArray("hud") instance=ExtResource("5_rka8t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.139166, -7.3596363, 31.1226)
+hud = NodePath("../../HUD")
+
+[node name="Coin7" parent="Coins" unique_id=1385943058 node_paths=PackedStringArray("hud") instance=ExtResource("5_rka8t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.139168, -7.3596363, 31.1226)
+hud = NodePath("../../HUD")
+
+[node name="Coin8" parent="Coins" unique_id=2036819674 node_paths=PackedStringArray("hud") instance=ExtResource("5_rka8t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.139168, -7.3596363, 19.1226)
+hud = NodePath("../../HUD")
+
+[node name="Coin9" parent="Coins" unique_id=976030344 node_paths=PackedStringArray("hud") instance=ExtResource("5_rka8t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.139168, -7.3596363, 19.1226)
+hud = NodePath("../../HUD")
+
+[node name="Coin10" parent="Coins" unique_id=1974857850 node_paths=PackedStringArray("hud") instance=ExtResource("5_rka8t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.053439, 2.6403637, 11.122601)
+hud = NodePath("../../HUD")
+
+[node name="Coin12" parent="Coins" unique_id=482286504 node_paths=PackedStringArray("hud") instance=ExtResource("5_rka8t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.94656086, -7.3596363, 25.165272)
+hud = NodePath("../../HUD")
+
+[node name="Coin11" parent="Coins" unique_id=1767454978 node_paths=PackedStringArray("hud") instance=ExtResource("5_rka8t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.960898, 2.6403637, 11.122601)
+hud = NodePath("../../HUD")
+
 [node name="HUD" parent="." unique_id=906611027 instance=ExtResource("7_j7kpp")]
 
 [node name="Enemies" type="Node3D" parent="." unique_id=232599972]
 
 [node name="Enemy1" parent="Enemies" unique_id=470753021 instance=ExtResource("8_bjebc")]
 transform = Transform3D(-6.556708e-08, 0, 1.5, 0, 1.5, 0, -1.5, 0, -6.556708e-08, -5.000081, 0.22154391, -0.90853584)
+
+[node name="Enemy6" parent="Enemies" unique_id=334653296 instance=ExtResource("8_bjebc")]
+transform = Transform3D(-6.556708e-08, 0, 1.5, 0, 1.5, 0, -1.5, 0, -6.556708e-08, -13.976113, 2.1052046, 3.2291303)
 
 [node name="Enemy2" parent="Enemies" unique_id=850762831 instance=ExtResource("8_bjebc")]
 transform = Transform3D(1.4992622, 0, 0.047040034, 0, 1.5, 0, -0.047040034, 0, 1.4992622, 0.76121235, 0.22154391, 9.016942)
@@ -84,6 +117,10 @@ direction = Vector3(0, 0, 1)
 
 [node name="Enemy5" parent="Enemies" unique_id=1517595786 instance=ExtResource("8_bjebc")]
 transform = Transform3D(1.4992622, 0, 0.04704003, 0, 1.5, 0, -0.04704003, 0, 1.4992622, -3.0487642, 0.22154391, 2.9655676)
+direction = Vector3(0, 0, 1)
+
+[node name="Enemy7" parent="Enemies" unique_id=2116986766 instance=ExtResource("8_bjebc")]
+transform = Transform3D(1.4992622, 0, 0.04704003, 0, 1.5, 0, -0.04704003, 0, 1.4992622, -14.973068, 2.289781, -4.2300076)
 direction = Vector3(0, 0, 1)
 
 [node name="Moving Platforms" type="Node3D" parent="." unique_id=1426177581]

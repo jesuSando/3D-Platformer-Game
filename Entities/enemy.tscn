@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://dgb62lwnfirwd"]
 
-[ext_resource type="Script" uid="uid://ijp15qufwuxd" path="res://enemy.gd" id="1_7k104"]
+[ext_resource type="Script" uid="uid://ijp15qufwuxd" path="res://Entities/enemy.gd" id="1_7k104"]
 [ext_resource type="AudioStream" uid="uid://j6rpu5elsay" path="res://Assets/SoundEffects/squash-jump2.ogg" id="2_4gyqm"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xyf24"]

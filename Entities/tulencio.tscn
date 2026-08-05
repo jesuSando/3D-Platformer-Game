@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://c3e6e0p3kp8t2"]
 
-[ext_resource type="Script" uid="uid://d2mjndckm8yqx" path="res://tulencio.gd" id="1_ga6ij"]
+[ext_resource type="Script" uid="uid://d2mjndckm8yqx" path="res://Entities/tulencio.gd" id="1_ga6ij"]
 [ext_resource type="Texture2D" uid="uid://b2g767vqhdcar" path="res://Assets/Models/game-robot-001_robot_mix_decals.png" id="2_gdhr3"]
 [ext_resource type="AudioStream" uid="uid://lfpdqem7xej7" path="res://Assets/SoundEffects/jump-jump4.ogg" id="3_xwwhw"]
 

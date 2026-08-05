@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://tn84iu8qyl2r"]
 
-[ext_resource type="Script" uid="uid://41m0t8w1g5xs" path="res://hud.gd" id="1_8sq4i"]
+[ext_resource type="Script" uid="uid://41m0t8w1g5xs" path="res://UI/hud.gd" id="1_8sq4i"]
 [ext_resource type="Texture2D" uid="uid://kjvrf75rdtkr" path="res://Assets/Images/hud_coin.png" id="1_37p78"]
 [ext_resource type="FontFile" uid="uid://cc6exmpil57oa" path="res://Assets/Fonts/FrancoisOne-Regular.ttf" id="2_64ctp"]
 

@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://bn2uqh7soblyl"]
+
+[ext_resource type="PackedScene" uid="uid://c3e6e0p3kp8t2" path="res://Entities/tulencio.tscn" id="1_dgq3b"]
+[ext_resource type="Environment" uid="uid://dydlph0aywc21" path="res://Resources/level_1_enviroment.tres" id="2_bcgyv"]
+[ext_resource type="MeshLibrary" uid="uid://m3qtj04tw8j8" path="res://Resources/world-blocks-v1.tres" id="3_fbld2"]
+[ext_resource type="PackedScene" uid="uid://csovj13d8w058" path="res://Resources/platform_3x_2.tscn" id="4_s275v"]
+[ext_resource type="PackedScene" uid="uid://dbxs52if8rhw0" path="res://Entities/coin.tscn" id="5_bcgyv"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pml6m"]
+size = Vector3(1, 5.097168, 1)
+
+[node name="Level_2" type="Node3D" unique_id=951473485]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1785997944]
+transform = Transform3D(0.9226455, 0.12202268, -0.36583567, 0.26382634, 0.49219164, 0.8295439, 0.28128442, -0.86189204, 0.4219256, 0, 5.8042407, 0)
+shadow_enabled = true
+
+[node name="Tulencio" parent="." unique_id=2036021083 instance=ExtResource("1_dgq3b")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 0, 1, 0)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=2033111857]
+environment = ExtResource("2_bcgyv")
+
+[node name="FallZone" type="Area3D" parent="." unique_id=623363336]
+transform = Transform3D(1.7, 0, 0, 0, 1, 0, 0, 0, 1, 0, -21.38587, 0)
+collision_layer = 16
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="FallZone" unique_id=645984701]
+transform = Transform3D(124.22614, 0, 0, 0, 1, 0, 0, 0, 124.22614, 0, 2.048584, 0)
+shape = SubResource("BoxShape3D_pml6m")
+
+[node name="GridMap" type="GridMap" parent="." unique_id=1744335959]
+mesh_library = ExtResource("3_fbld2")
+collision_layer = 2
+collision_mask = 13
+data = {
+"cells": PackedInt32Array(-2, 65534, 655366, -2, 65535, 0, -2, 0, 0, -2, 1, 1441798, -1, 65534, 0, -1, 65535, 0, -1, 0, 0, -1, 1, 0, -65536, 65534, 0, -65536, 65535, 0, -65536, 0, 0, -65536, 1, 0, -65535, 65534, 1048582, -65535, 65535, 0, -65535, 0, 0, -65535, 1, 6, 2, 65535, 2, 2, 0, 2, 3, 65535, 1, 3, 0, 1, -65534, 65535, 0, -65534, 0, 0, -65533, 0, 0, -65533, 65535, 0, 4, 65535, 0, 4, 0, 0, 5, 65535, 0, 5, 0, 0, -65536, 2, 1048577, -1, 2, 1048577, -1, 65533, 1048576, -65536, 65533, 1048576, -1, 65532, 1048576, -65536, 65532, 1048576, -65536, 3, 1048578, -1, 3, 1048578, -65535, 65521, 6, -2, 65520, 655365, -2, 65519, 655365, -65535, 65520, 5, -65535, 65519, 5, -65535, 65518, 1048582, -65536, 65518, 1048581, -1, 65518, 1048581, -2, 65518, 655366, -2, 65521, 1441798, -6, 65528, 0, -7, 65528, 0, -7, 65527, 0, -6, 65527, 0, 5, 1, 1441797, 4, 1, 1441798, 4, 65534, 655366, 5, 65534, 1048581, 6, 65534, 1048581, 6, 65535, 0, 6, 0, 0, 6, 1, 1441797, -3, 0, 0, -3, 65535, 0, -4, 65535, 0, -4, 0, 0, -5, 0, 0, -5, 65535, 0, -6, 0, 0, -6, 65535, 0, 65530, 0, 0, 131066, 0, 0, 131066, 65535, 0, 65532, 0, 3, 65532, 65535, 3, 65531, 0, 0, 65531, 65535, 0, 65528, 65535, 1048576, -8, 0, 983040, -8, 65535, 983040, 65528, 0, 1048576, 65530, 65535, 983040, 65527, 0, 1048576, 65527, 65535, 1048576, -131072, 3, 1048576, -65537, 3, 1048576, -131072, 4, 1048576, -65537, 4, 1048576, -131072, 6, 1048576, -65537, 6, 1048576, -131072, 8, 1048576, -65537, 8, 1048576, -131072, 10, 1048576, -65537, 10, 1048576, -131072, 11, 1048576, -65537, 11, 1048576, 7, 65534, 1048582, 7, 1, 6, 7, 0, 1048576, 7, 65535, 1048576, 10, 0, 1048576, 9, 0, 1048576, 9, 65535, 1048576, 10, 65535, 1048576, 131064, 65535, 1048576, 131064, 0, 1048576, -1, 65523, 1048576, -65536, 65523, 1048576, -65536, 65522, 1048576, -1, 65522, 1048576, -1, 65521, 1048576, -65536, 65521, 1048576, -1, 65520, 1048576, -65536, 65520, 1048576, -65536, 65519, 1048576, -1, 65519, 1048576)
+}
+metadata/_editor_floor_ = Vector3(0, -1, 0)
+
+[node name="Moving Platforms" type="Node3D" parent="." unique_id=1664133141]
+
+[node name="Platform3x2" parent="Moving Platforms" unique_id=1213040738 instance=ExtResource("4_s275v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -11)
+a = Vector3(0, 0, -11)
+b = Vector3(-12, 0, -11)
+
+[node name="Platform3x3" parent="Moving Platforms" unique_id=2129578379 instance=ExtResource("4_s275v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -21)
+a = Vector3(0, 0, -21)
+b = Vector3(-12, 0, -21)
+
+[node name="coins" type="Node3D" parent="." unique_id=875923876]
+
+[node name="Coin" parent="coins" unique_id=1550864334 instance=ExtResource("5_bcgyv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 3)
