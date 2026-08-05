@@ -17,6 +17,7 @@ script = ExtResource("1_77x7w")
 coins_to_win = 2
 next_level = "uid://bn2uqh7soblyl"
 hud = NodePath("HUD")
+level_title = "Tutorial"
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=500782391]
 transform = Transform3D(0.9226455, 0.12202268, -0.36583567, 0.26382634, 0.49219164, 0.8295439, 0.28128442, -0.86189204, 0.4219256, 0, 5.8042407, 0)

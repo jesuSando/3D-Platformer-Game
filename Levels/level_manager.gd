@@ -4,6 +4,7 @@ extends Node
 @export var enemies_to_win := 0
 @export_file("*.tscn") var next_level := ""
 @export var hud : CanvasLayer
+@export var level_title := ""
 
 var finished := false
 
@@ -12,9 +13,8 @@ func _ready() -> void:
 	Global.coins = 0
 	Global.enemies = 0
 	if hud:
-		var level_title = hud.find_child("LevelTitle", true, false)
-		if level_title:
-			level_title.text = str(Global.level)
+		if hud.find_child("LevelTitle", true, false):
+			hud.get_node("LevelTitle").text = str(level_title)
 	else:
 		push_warning("el hud no ha sido asignado")
 
