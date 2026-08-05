@@ -34,7 +34,8 @@ func finish_level():
 	if next_level.is_empty():
 		win()
 	else:
-		get_tree().call_deferred("change_scene_to_file", next_level)
+		Global.level = next_level
+		get_tree().call_deferred("change_scene_to_file", "res://UI/menu_next_level.tscn")
 
 func win():
 	get_tree().call_deferred("change_scene_to_file", "res://UI/menu_win.tscn")
