@@ -19,6 +19,7 @@ config/icon="uid://bxayqup53ocwm"
 
 Global="*uid://b2b3iiaytyc5"
 SoundManager="*uid://cwsi513c3ycbp"
+LevelManager="*uid://m0ycb0ix5fhc"
 
 [display]
 

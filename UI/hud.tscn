@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://41m0t8w1g5xs" path="res://UI/hud.gd" id="1_8sq4i"]
 [ext_resource type="Texture2D" uid="uid://kjvrf75rdtkr" path="res://Assets/Images/hud_coin.png" id="1_37p78"]
 [ext_resource type="FontFile" uid="uid://cc6exmpil57oa" path="res://Assets/Fonts/FrancoisOne-Regular.ttf" id="2_64ctp"]
+[ext_resource type="Texture2D" uid="uid://buwmyfqauf1vl" path="res://Assets/Images/hud_enemy.png" id="4_b1lf8"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ucixj"]
 bg_color = Color(0, 0, 0, 0.39215687)
@@ -44,6 +45,51 @@ offset_left = 134.0
 offset_top = 35.0
 offset_right = 190.0
 offset_bottom = 99.0
+theme_override_colors/font_color = Color(0.80784315, 0.6627451, 0.043137256, 1)
+theme_override_fonts/font = ExtResource("2_64ctp")
+theme_override_font_sizes/font_size = 45
+text = "##"
+
+[node name="Panel2" type="Panel" parent="." unique_id=1073554724]
+offset_left = 231.0
+offset_top = 31.0
+offset_right = 409.0
+offset_bottom = 100.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ucixj")
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=1772264739]
+offset_left = 245.0
+offset_top = 34.0
+offset_right = 307.0
+offset_bottom = 96.0
+texture = ExtResource("4_b1lf8")
+expand_mode = 1
+
+[node name="Label2" type="Label" parent="." unique_id=1275828102]
+offset_left = 310.0
+offset_top = 40.0
+offset_right = 348.0
+offset_bottom = 91.0
+theme_override_colors/font_color = Color(0.80784315, 0.6627451, 0.043137256, 1)
+theme_override_fonts/font = ExtResource("2_64ctp")
+theme_override_font_sizes/font_size = 35
+text = "x"
+
+[node name="EnemiesLabel" type="Label" parent="." unique_id=2071942014]
+offset_left = 336.0
+offset_top = 35.0
+offset_right = 392.0
+offset_bottom = 99.0
+theme_override_colors/font_color = Color(0.80784315, 0.6627451, 0.043137256, 1)
+theme_override_fonts/font = ExtResource("2_64ctp")
+theme_override_font_sizes/font_size = 45
+text = "##"
+
+[node name="LevelTitle" type="Label" parent="." unique_id=1349925873]
+offset_left = 973.0
+offset_top = 31.0
+offset_right = 1029.0
+offset_bottom = 95.0
 theme_override_colors/font_color = Color(0.80784315, 0.6627451, 0.043137256, 1)
 theme_override_fonts/font = ExtResource("2_64ctp")
 theme_override_font_sizes/font_size = 45

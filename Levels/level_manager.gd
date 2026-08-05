@@ -3,12 +3,20 @@ extends Node
 @export var coins_to_win := 0
 @export var enemies_to_win := 0
 @export_file("*.tscn") var next_level := ""
+@export var hud : CanvasLayer
+
 var finished := false
 
 func _ready() -> void:
 	SoundManager.play_level_music()
 	Global.coins = 0
 	Global.enemies = 0
+	if hud:
+		var level_title = hud.find_child("LevelTitle", true, false)
+		if level_title:
+			level_title.text = str(Global.level)
+	else:
+		push_warning("el hud no ha sido asignado")
 
 func _process(delta: float) -> void:
 	if finished: 
@@ -30,3 +38,6 @@ func finish_level():
 
 func win():
 	get_tree().call_deferred("change_scene_to_file", "res://UI/menu_win.tscn")
+
+func game_over():
+	get_tree().call_deferred("change_scene_to_file", "res://UI/menu_game_over.tscn")

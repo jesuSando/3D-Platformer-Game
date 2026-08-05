@@ -44,7 +44,7 @@ func turn_around():
 
 func _on_sides_checker_body_entered(body: Node3D) -> void:
 	SoundManager.play_enemy_sound()
-	get_tree().call_deferred("change_scene_to_file", "res://UI/menu_game_over.tscn")
+	LevelManager.game_over()
 
 
 func _on_top_checker_body_entered(body: Node3D) -> void:
