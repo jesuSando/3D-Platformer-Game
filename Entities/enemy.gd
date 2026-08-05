@@ -5,6 +5,7 @@ var speed = 2.0
 
 @export var direction := Vector3(1,0,0)
 @export var turns_around_at_edges := true
+@export var hud : CanvasLayer
 
 var turning := false
 
@@ -48,9 +49,11 @@ func _on_sides_checker_body_entered(body: Node3D) -> void:
 
 
 func _on_top_checker_body_entered(body: Node3D) -> void:
+	Global.enemies += 1
 	$AnimationPlayer.play("squash")
 	$SoundSquash.play()
 	body.bounce()
+	hud.get_node("EnemiesLabel").text = str(Global.enemies)
 	$SidesChecker.set_collision_mask_value(1, false)
 	$TopChecker.set_collision_mask_value(1, false)
 	direction = Vector3.ZERO

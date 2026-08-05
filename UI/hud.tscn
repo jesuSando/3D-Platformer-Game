@@ -48,7 +48,7 @@ offset_bottom = 99.0
 theme_override_colors/font_color = Color(0.80784315, 0.6627451, 0.043137256, 1)
 theme_override_fonts/font = ExtResource("2_64ctp")
 theme_override_font_sizes/font_size = 45
-text = "##"
+text = "0"
 
 [node name="Panel2" type="Panel" parent="." unique_id=1073554724]
 offset_left = 231.0
@@ -83,7 +83,7 @@ offset_bottom = 99.0
 theme_override_colors/font_color = Color(0.80784315, 0.6627451, 0.043137256, 1)
 theme_override_fonts/font = ExtResource("2_64ctp")
 theme_override_font_sizes/font_size = 45
-text = "##"
+text = "0"
 
 [node name="LevelTitle" type="Label" parent="." unique_id=1349925873]
 offset_left = 973.0
@@ -94,3 +94,26 @@ theme_override_colors/font_color = Color(0.80784315, 0.6627451, 0.043137256, 1)
 theme_override_fonts/font = ExtResource("2_64ctp")
 theme_override_font_sizes/font_size = 45
 text = "##"
+
+[node name="Separator" type="Label" parent="." unique_id=1889492362]
+offset_left = 927.0
+offset_top = 28.0
+offset_right = 983.0
+offset_bottom = 92.0
+theme_override_colors/font_color = Color(0.80784315, 0.6627451, 0.043137256, 1)
+theme_override_fonts/font = ExtResource("2_64ctp")
+theme_override_font_sizes/font_size = 45
+text = "-"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LevelNumber" type="Label" parent="." unique_id=2016133529]
+offset_left = 879.0
+offset_top = 31.0
+offset_right = 935.0
+offset_bottom = 95.0
+theme_override_colors/font_color = Color(0.80784315, 0.6627451, 0.043137256, 1)
+theme_override_fonts/font = ExtResource("2_64ctp")
+theme_override_font_sizes/font_size = 45
+text = "##"
+horizontal_alignment = 2

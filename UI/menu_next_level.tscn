@@ -49,10 +49,10 @@ expand_mode = 1
 
 [node name="Button" type="Button" parent="." unique_id=1414647943]
 layout_mode = 0
-offset_left = 641.3793
-offset_top = 312.93103
-offset_right = 1048.3793
-offset_bottom = 406.93103
+offset_left = 582.7586
+offset_top = 315.51727
+offset_right = 989.7586
+offset_bottom = 409.51727
 theme_override_colors/font_color = Color(0.5686275, 0.92941177, 0.09411765, 1)
 theme_override_colors/font_hover_color = Color(1, 0.90588236, 0.07058824, 1)
 theme_override_colors/font_outline_color = Color(0.58000004, 0.16000003, 1, 1)

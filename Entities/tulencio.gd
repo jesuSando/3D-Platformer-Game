@@ -79,7 +79,7 @@ func play_anim(anim: String):
 
 func _on_fall_zone_body_entered(body: Node3D) -> void:
 	SoundManager.play_fall_sound()
-	LevelManager.game_over()
+	get_tree().call_deferred("change_scene_to_file", "res://UI/menu_game_over.tscn")
 	
 func bounce():
 	velocity.y = JUMP_VELOCITY * 0.7

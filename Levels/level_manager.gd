@@ -15,6 +15,8 @@ func _ready() -> void:
 	if hud:
 		if hud.find_child("LevelTitle", true, false):
 			hud.get_node("LevelTitle").text = str(level_title)
+		if hud.find_child("LevelNumber", true, false):
+			hud.get_node("LevelNumber").text = str(Global.level_num)
 	else:
 		push_warning("el hud no ha sido asignado")
 
