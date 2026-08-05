@@ -21,10 +21,10 @@ func _physics_process(delta: float) -> void:
 	
 	
 	#rotate the camera
-	if Input.is_action_just_pressed("cam_left"):
-		$Camera_Controller.rotate_y(deg_to_rad(30))
-	elif Input.is_action_just_pressed("cam_right"):
-		$Camera_Controller.rotate_y(deg_to_rad(-30))
+	if Input.is_action_pressed("cam_left"):
+		$Camera_Controller.rotate_y(deg_to_rad(2))
+	elif Input.is_action_pressed("cam_right"):
+		$Camera_Controller.rotate_y(deg_to_rad(-2))
 	
 	# Add the gravity.
 	if not is_on_floor():

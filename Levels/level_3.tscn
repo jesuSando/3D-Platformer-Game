@@ -13,7 +13,7 @@ size = Vector3(1, 5.097168, 1)
 
 [node name="Level3" type="Node3D" unique_id=1145978088 node_paths=PackedStringArray("hud")]
 script = ExtResource("1_padch")
-enemies_to_win = 20
+enemies_to_win = 2
 hud = NodePath("HUD")
 level_title = "Kill 20 Enemies"
 
