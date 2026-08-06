@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://m0ycb0ix5fhc" path="res://Levels/level_manager.gd" id="1_77x7w"]
 [ext_resource type="Environment" uid="uid://dydlph0aywc21" path="res://Resources/level_1_enviroment.tres" id="4_ihfcg"]
+[ext_resource type="Script" uid="uid://c5xpfoicngvy4" path="res://Levels/fall_zone.gd" id="4_xoyoh"]
 [ext_resource type="MeshLibrary" uid="uid://m3qtj04tw8j8" path="res://Resources/world-blocks-v1.tres" id="5_5hph3"]
 [ext_resource type="PackedScene" uid="uid://dbxs52if8rhw0" path="res://Entities/coin.tscn" id="5_rka8t"]
 [ext_resource type="PackedScene" uid="uid://tn84iu8qyl2r" path="res://UI/hud.tscn" id="7_j7kpp"]
@@ -38,6 +39,7 @@ metadata/_editor_floor_ = Vector3(0, -5, 0)
 [node name="FallZone" type="Area3D" parent="." unique_id=1080638947]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -21.38587, 0)
 collision_layer = 16
+script = ExtResource("4_xoyoh")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="FallZone" unique_id=2059244606]
 transform = Transform3D(124.22614, 0, 0, 0, 1, 0, 0, 0, 124.22614, 0, 2.048584, 0)
@@ -177,5 +179,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, -8, 15)
 a = Vector3(-14, 2, 15)
 b = Vector3(-14, -8, 15)
 
-[node name="Player" parent="." unique_id=109602856 instance=ExtResource("8_77x7w")]
+[node name="Player" parent="." unique_id=109602856 groups=["Player"] instance=ExtResource("8_77x7w")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 6, -9)
+
+[connection signal="body_entered" from="FallZone" to="Player" method="_on_body_entered"]

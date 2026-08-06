@@ -55,12 +55,18 @@ func rotate_character(move_direction: Vector3, delta: float):
 	var new_rotation = lerp_angle(skin.rotation.y, target_rotation, rotation_speed * delta)
 	skin.rotation.y = new_rotation
 
+func fall():
+	SoundManager.play_fall_sound()
+	LevelManager.game_over()
+	
 func play_anim(anim: String):
 	if $AnimationPlayer.current_animation != anim:
 		$AnimationPlayer.play(anim)
 
 func bounce():
 	velocity.y = JUMP_VELOCITY * 0.7
+
+	
 
 #func align_with_floor(floor_normal):
 	#xform = global_transform

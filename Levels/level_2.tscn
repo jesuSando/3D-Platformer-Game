@@ -6,10 +6,11 @@
 [ext_resource type="PackedScene" uid="uid://csovj13d8w058" path="res://Resources/platform_3x_2.tscn" id="4_s275v"]
 [ext_resource type="PackedScene" uid="uid://dbxs52if8rhw0" path="res://Entities/coin.tscn" id="5_bcgyv"]
 [ext_resource type="PackedScene" uid="uid://tn84iu8qyl2r" path="res://UI/hud.tscn" id="6_fbld2"]
+[ext_resource type="Script" uid="uid://c5xpfoicngvy4" path="res://Levels/fall_zone.gd" id="7_pml6m"]
 [ext_resource type="PackedScene" uid="uid://ba64l5freumbi" path="res://Entities/player.tscn" id="7_s275v"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_ucixj"]
-size = Vector3(81, 1, 97)
+[sub_resource type="BoxShape3D" id="BoxShape3D_pml6m"]
+size = Vector3(1, 5.097168, 1)
 
 [node name="Level_2" type="Node3D" unique_id=951473485 node_paths=PackedStringArray("hud")]
 script = ExtResource("1_s275v")
@@ -154,13 +155,14 @@ hud = NodePath("../../HUD")
 
 [node name="HUD" parent="." unique_id=906611027 instance=ExtResource("6_fbld2")]
 
-[node name="FallZone" type="Area3D" parent="." unique_id=953251363]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -20, 0)
-collision_mask = 16
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="FallZone" unique_id=2010862723]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -7.050001)
-shape = SubResource("BoxShape3D_ucixj")
-
-[node name="Player" parent="." unique_id=109602856 instance=ExtResource("7_s275v")]
+[node name="Player" parent="." unique_id=109602856 groups=["Player"] instance=ExtResource("7_s275v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="FallZone" type="Area3D" parent="." unique_id=1852799182]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -21.38587, 0)
+collision_layer = 16
+script = ExtResource("7_pml6m")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="FallZone" unique_id=1596829426]
+transform = Transform3D(124.22614, 0, 0, 0, 1, 0, 0, 0, 124.22614, 0, 2.048584, 0)
+shape = SubResource("BoxShape3D_pml6m")
