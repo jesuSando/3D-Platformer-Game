@@ -33,6 +33,7 @@ func _process(delta: float) -> void:
 	
 
 func finish_level():
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	if next_level.is_empty():
 		win()
 	else:
