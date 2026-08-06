@@ -9,7 +9,6 @@ extends Node
 var finished := false
 
 func _ready() -> void:
-	SoundManager.play_level_music()
 	Global.coins = 0
 	Global.enemies = 0
 	if hud:
@@ -33,15 +32,17 @@ func _process(delta: float) -> void:
 	
 
 func finish_level():
-	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	if next_level.is_empty():
 		win()
 	else:
 		Global.level = next_level
+		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 		get_tree().call_deferred("change_scene_to_file", "res://UI/menu_next_level.tscn")
 
 func win():
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	get_tree().call_deferred("change_scene_to_file", "res://UI/menu_win.tscn")
 
 func game_over():
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	get_tree().call_deferred("change_scene_to_file", "res://UI/menu_game_over.tscn")
