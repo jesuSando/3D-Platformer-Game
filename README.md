@@ -1,7 +1,7 @@
 # 🎮 3D Platformer Game
 
 <p align="center">
-    <img src="docs/gameplay.gif" alt="Gameplay" width="800"/>
+    <img src="Docs/gameplay.gif" alt="Gameplay" width="800"/>
 </p>
 
 A 3D platformer created with **Godot 4** and **Blender** as my first 3D game development project.
@@ -39,7 +39,7 @@ Features:
 - Learn the controls
 
 <p align="center">
-<img src="docs/level1.png" width="700">
+<img src="Docs/level1.png" width="700">
 </p>
 
 ---
@@ -56,7 +56,7 @@ Features:
 - No enemies
 
 <p align="center">
-<img src="docs/level2.png" width="700">
+<img src="Docs/level2.png" width="700">
 </p>
 
 ---
@@ -72,7 +72,7 @@ Features:
 - No coin collection
 
 <p align="center">
-<img src="docs/level3.png" width="700">
+<img src="Docs/level3.png" width="700">
 </p>
 
 ---
