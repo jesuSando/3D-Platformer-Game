@@ -1,19 +1,19 @@
 [gd_scene format=3 uid="uid://bn2uqh7soblyl"]
 
-[ext_resource type="PackedScene" uid="uid://c3e6e0p3kp8t2" path="res://Entities/tulencio.tscn" id="1_dgq3b"]
 [ext_resource type="Script" uid="uid://m0ycb0ix5fhc" path="res://Levels/level_manager.gd" id="1_s275v"]
 [ext_resource type="Environment" uid="uid://dydlph0aywc21" path="res://Resources/level_1_enviroment.tres" id="2_bcgyv"]
 [ext_resource type="MeshLibrary" uid="uid://m3qtj04tw8j8" path="res://Resources/world-blocks-v1.tres" id="3_fbld2"]
 [ext_resource type="PackedScene" uid="uid://csovj13d8w058" path="res://Resources/platform_3x_2.tscn" id="4_s275v"]
 [ext_resource type="PackedScene" uid="uid://dbxs52if8rhw0" path="res://Entities/coin.tscn" id="5_bcgyv"]
 [ext_resource type="PackedScene" uid="uid://tn84iu8qyl2r" path="res://UI/hud.tscn" id="6_fbld2"]
+[ext_resource type="PackedScene" uid="uid://ba64l5freumbi" path="res://Entities/player.tscn" id="7_s275v"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ucixj"]
 size = Vector3(81, 1, 97)
 
 [node name="Level_2" type="Node3D" unique_id=951473485 node_paths=PackedStringArray("hud")]
 script = ExtResource("1_s275v")
-coins_to_win = 20
+coins_to_win = 3
 next_level = "uid://dstkkmuoh3l26"
 hud = NodePath("HUD")
 level_title = "Collect 20 Coins"
@@ -21,9 +21,6 @@ level_title = "Collect 20 Coins"
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1785997944]
 transform = Transform3D(0.9226455, 0.12202268, -0.36583567, 0.26382634, 0.49219164, 0.8295439, 0.28128442, -0.86189204, 0.4219256, 0, 5.8042407, 0)
 shadow_enabled = true
-
-[node name="Tulencio" parent="." unique_id=2036021083 instance=ExtResource("1_dgq3b")]
-transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 0, 1, 0)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=2033111857]
 environment = ExtResource("2_bcgyv")
@@ -164,3 +161,6 @@ collision_mask = 16
 [node name="CollisionShape3D" type="CollisionShape3D" parent="FallZone" unique_id=2010862723]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -7.050001)
 shape = SubResource("BoxShape3D_ucixj")
+
+[node name="Player" parent="." unique_id=109602856 instance=ExtResource("7_s275v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)

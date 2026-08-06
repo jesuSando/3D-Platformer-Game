@@ -6,13 +6,14 @@
 [ext_resource type="MeshLibrary" uid="uid://m3qtj04tw8j8" path="res://Resources/world-blocks-v1.tres" id="4_fa81k"]
 [ext_resource type="PackedScene" uid="uid://csovj13d8w058" path="res://Resources/platform_3x_2.tscn" id="6_uwxw1"]
 [ext_resource type="PackedScene" uid="uid://dgb62lwnfirwd" path="res://Entities/enemy.tscn" id="7_ay5qi"]
+[ext_resource type="PackedScene" uid="uid://ba64l5freumbi" path="res://Entities/player.tscn" id="7_fa81k"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ucixj"]
 size = Vector3(1, 5.097168, 1)
 
 [node name="Level3" type="Node3D" unique_id=1145978088 node_paths=PackedStringArray("hud")]
 script = ExtResource("1_padch")
-enemies_to_win = 12
+enemies_to_win = 3
 hud = NodePath("HUD")
 level_title = "Kill 12 Enemies"
 
@@ -140,3 +141,6 @@ hud = NodePath("../../HUD")
 [node name="Enemy4" parent="Enemies" unique_id=418209721 node_paths=PackedStringArray("hud") instance=ExtResource("7_ay5qi")]
 transform = Transform3D(-6.556708e-08, 0, 1.5, 0, 1.5, 0, -1.5, 0, -6.556708e-08, 2.9726677, 2.105117, -5.324237)
 hud = NodePath("../../HUD")
+
+[node name="Player" parent="." unique_id=109602856 instance=ExtResource("7_fa81k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
