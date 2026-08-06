@@ -8,6 +8,12 @@ A 3D platformer created with **Godot 4** and **Blender** as my first 3D game dev
 
 The goal of this project was to learn the fundamentals of 3D game development, including character movement, level design, enemy behavior, 3D modeling, texturing, and asset integration.
 
+## 📥 Download
+
+You can download and play the latest Windows version from the **Releases** section.
+
+➡️ **[Download the latest release](../../releases/latest)**
+
 ---
 
 ## 📖 About
