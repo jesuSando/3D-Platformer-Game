@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://c115r8mocvqq8"]
 
 [ext_resource type="Script" uid="uid://m0ycb0ix5fhc" path="res://Levels/level_manager.gd" id="1_77x7w"]
-[ext_resource type="PackedScene" uid="uid://c3e6e0p3kp8t2" path="res://Entities/tulencio.tscn" id="2_hbghi"]
 [ext_resource type="Environment" uid="uid://dydlph0aywc21" path="res://Resources/level_1_enviroment.tres" id="4_ihfcg"]
 [ext_resource type="MeshLibrary" uid="uid://m3qtj04tw8j8" path="res://Resources/world-blocks-v1.tres" id="5_5hph3"]
 [ext_resource type="PackedScene" uid="uid://dbxs52if8rhw0" path="res://Entities/coin.tscn" id="5_rka8t"]
 [ext_resource type="PackedScene" uid="uid://tn84iu8qyl2r" path="res://UI/hud.tscn" id="7_j7kpp"]
 [ext_resource type="PackedScene" uid="uid://csovj13d8w058" path="res://Resources/platform_3x_2.tscn" id="8_5rr72"]
+[ext_resource type="PackedScene" uid="uid://ba64l5freumbi" path="res://Entities/player.tscn" id="8_77x7w"]
 [ext_resource type="PackedScene" uid="uid://dgb62lwnfirwd" path="res://Entities/enemy.tscn" id="8_bjebc"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ucixj"]
@@ -22,9 +22,6 @@ level_title = "Collect 12 Coins"
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=500782391]
 transform = Transform3D(0.9226455, 0.12202268, -0.36583567, 0.26382634, 0.49219164, 0.8295439, 0.28128442, -0.86189204, 0.4219256, 0, 5.8042407, 0)
 shadow_enabled = true
-
-[node name="Tulencio" parent="." unique_id=2036021083 instance=ExtResource("2_hbghi")]
-transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, -14.669817, 5.630815, -9.0999)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1551201861]
 environment = ExtResource("4_ihfcg")
@@ -180,4 +177,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, -8, 15)
 a = Vector3(-14, 2, 15)
 b = Vector3(-14, -8, 15)
 
-[connection signal="body_entered" from="FallZone" to="Tulencio" method="_on_fall_zone_body_entered"]
+[node name="Player" parent="." unique_id=109602856 instance=ExtResource("8_77x7w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 6, -9)
